@@ -24,6 +24,7 @@ func main() {
 		fmt.Println("Press 2. Read")
 		fmt.Println("Press 3. Update")
 		fmt.Println("Press 4. Delete")
+		fmt.Println("Press 5. Exit")
 
 		fmt.Scanln(&input)
 
@@ -48,8 +49,11 @@ func createEmp(employees map[int]Employee) {
 	fmt.Println("Enter employee details")
 	fmt.Println("Enter employee id")
 	fmt.Scanln(&emp.id)
+	fmt.Println("Enter employee name")
 	fmt.Scanln(&emp.name)
+	fmt.Println("Enter employee skill")
 	fmt.Scanln(&emp.skill)
+	fmt.Println("Enter employee salary")
 	fmt.Scanln(&emp.salary)
 	//fmt.Printf("%#v \n", emp)
 	employees[emp.id] = emp
@@ -59,7 +63,7 @@ func updateEmp(employees map[int]Employee) {
 
 	var id, sal int
 
-	fmt.Println("Enter id whose salary wanna icrease")
+	fmt.Println("Enter id whose salary you wanna increase")
 	fmt.Scanln(&id)
 	fmt.Println("Enter new salary")
 	fmt.Scanln(&sal)
